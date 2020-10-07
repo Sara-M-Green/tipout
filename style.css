@@ -1,0 +1,34 @@
+.busserInfo{
+    margin-top: 20px;
+}
+
+.group{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 5px;
+    margin:  10px auto;
+    background-image: url(https://www.designbolts.com/wp-content/uploads/2012/12/Subtle-Dots-White-Tileable-pattern.jpg);
+    text-align: center;
+}
+
+.barbackInfo{
+    margin-top: 20px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.input {
+    margin: 2px;
+}
+
+h4 {
+    font-size: 20px;
+    Display: inline;
+}
+
+body {
+    background-image: url(https://i.pinimg.com/originals/e4/62/e2/e462e25fd08d2f1c5055b7b7dae1ed2a.jpg);
+}

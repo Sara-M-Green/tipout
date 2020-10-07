@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shelter Tip Out Form</title> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="https://static1.squarespace.com/static/56455b44e4b00a3ec7d389c7/t/5e8e3613e2287578f444c003/1598634016482/?format=1500w" width="50" height="50"></a>
+    <h2>Shelter Distilling Daily Tip Out</h2>
+    </nav>
+
+    <div class="group">
+        <h4>Date: </h4><input class="input" type="date"  min="2020-01-01" max="2022-12-31"> 
+        <div>
+          Total Credit Card Tips: $ <input class="input" id="totalCCTips" type="number">  
+        </div>
+    </div>     
+
+        <!-- KITCHEN TIP OUT -->
+        <div class="group">
+            <h4>Kitchen Tip Out (2% of Food Sales)</h4>
+            <div>
+                 Total Food Sales: $ <input class="input" id="foodSales" type="number">
+            </div>
+            <div>
+                 Kitchen Tips: $ <input class="input" id="kitchenTips" type="number">
+                <buttton id="kitchenBtn" class="btn btn-sm btn-info"  data-toggle="button">Calculate</buttton>
+            </div>
+        </div>
+
+       <!--  PREP TIP OUT -->
+        <div class="group">
+            <h4>Prep Tip Out (1.5% of Cocktail Sales)</h4>
+            <div>
+                 Total Cocktail Sales: $ <input class="input" id="cocktailSales" type="number">
+            </div>
+            <div>
+                 Prep Tips: $ <input class="input" id="prepTips" type="number">
+                <buttton id="prepBtn" class="btn btn-sm btn-info">Calculate</buttton>
+            </div>
+        </div>
+
+        <!-- BUSSER TIP OUT -->
+        <div class="group">
+            <h4>Busser Tip Out (4% Food Sales)</h4>           
+            <div>
+                Time Frame with Busser(s):
+                <strong>Start:</strong> <input type="time">
+                <strong>End:</strong> <input type="time">  
+            </div>
+            <div>
+                Total Food Sales During Time Frame: $ <input class="input" id="busserFoodSales" type="number">
+            </div> 
+            <div class="busserInfo">
+                <div>
+                    Name: <input class="input" type="text" placeholder="Busser 1">
+                    Hours  Worked: <input class="input" id="busser1Hours" type="number">
+                    Tips: $ <input class="input" id="busser1Tips" type="number">   
+                </div>
+                <div>
+                    Name: <input class="input" type="text" placeholder="Busser 2">
+                    Hours  Worked: <input class="input" id="busser2Hours" type="number">
+                    Tips: $ <input class="input" id="busser2Tips" type="number">   
+                </div>
+                <div>
+                    Name: <input class="input" type="text" placeholder="Busser 3">
+                    Hours  Worked: <input class="input" id="busser3Hours" type="number">
+                    Tips: $ <input class="input" id="busser3Tips" type="number">   
+                </div>
+        
+                <div>
+                    Total Busser Tips: $ <input class="input" id="totalBusserTips" type="number">
+                </div>
+                <div>
+                    Total Busser Hours: <input class="input" id="totalBusserHours" type="number">
+                </div>
+                <div>
+                    Busser Tips Per Hour: $ <input class="input" id="busserHourlyTips" type="number">
+                </div>
+
+                <div>
+                    <buttton id="busserBtn" class="btn btn-sm btn-info">Calculate</buttton>
+                </div>
+            </div>
+        </div>
+
+        <!--BARBACK TIP OUT -->
+        <div class="group">
+            <h4>Barback Tip Out (1.5% Sales)</h4>
+            <div class="barbackInfo">
+                <div>
+                    Name: <input class="input" type="text" placeholder="Barback 1">
+                    Timeframe:
+                    <strong>Start:</strong> <input type="time">
+                    <strong>End:</strong> <input type="time">
+                </div>
+                <div>
+                    Total Sales: <input class="input" id="barback1Sales" type="number">
+                    Tips: $ <input id="barback1Tips" type="number">
+                </div>
+            </div>
+            <div class="barbackInfo">
+                <div>
+                    Name: <input class="input" type="text" placeholder="Barback 2">
+                    Timeframe:
+                    <strong>Start:</strong> <input type="time">
+                    <strong>End:</strong> <input type="time">
+                </div>
+                <div>
+                    Total Sales: <input class="input" id="barback2Sales" type="number">
+                    Tips: $ <input class="input" id="barback2Tips" type="number">
+                </div>
+            </div>
+            <div>
+                <buttton id="barbackBtn" class="btn btn-sm btn-info">Calculate</buttton>
+            </div>
+
+        </div>
+
+        <!-- HOST TIP OUT -->
+        <div class="group">
+            <h4>Host Tip Out (1% Food Sales - Friday/Saturday)</h4>
+            <div>
+                Host Timeframe:
+                <strong>Start:</strong> <input type="time">
+                <strong>End:</strong> <input type="time">
+            </div>
+            <div>
+                Total Food Sales During Time Frame: $ <input class="input" id="hostFoodSales" type="number">
+            </div>
+            <div>
+                Name: <input class="input" type="text">
+                Tips: $ <input class="input" id="hostTips" type="number">
+            </div>
+            <div>
+                <buttton id="hostBtn" class="btn btn-sm btn-info">Calculate</buttton>
+            </div>
+        </div>
+
+        <!-- BARTENDER TIP OUT -->
+        <div class="group">
+            <h4>Bartender Tip Out</h4>
+            <div class = "bartenderInfo">
+                <div>
+                    Name: <input class="input" type="text">
+                    Hours Worked: <input class="input" id="bartender1Hours" type="number">
+                    Bottles Sold: <input class="input" type="number">
+                    Tips: $ <input class="input" id="bartender1Tips" type="number">
+                </div>
+                <div>
+                    Name: <input class="input" type="text">
+                    Hours Worked: <input class="input" id="bartender2Hours" type="number">
+                    Bottles Sold: <input class="input" type="number">
+                    Tips: $ <input class="input" id="bartender2Tips" type="number">
+                </div>
+                <div>
+                    Name: <input class="input" type="text">
+                    Hours Worked: <input class="input" id="bartender3Hours" type="number">
+                    Bottles Sold: <input class="input" type="number">
+                    Tips: $ <input class="input" id="bartender3Tips" type="number">
+                </div>
+                <div>
+                    Name: <input class="input" type="text">
+                    Hours Worked: <input class="input" id="bartender4Hours" type="number">
+                    Bottles Sold: <input class="input" type="number">
+                    Tips: $ <input class="input" id="bartender4Tips" type="number">
+                </div>
+                <div>
+                    Name: <input class="input" type="text">
+                    Hours Worked: <input class="input" id="bartender5Hours" type="number">
+                    Bottles Sold: <input class="input" type="number">
+                    Tips: $ <input class="input" id="bartender5Tips" type="number">
+                </div>
+            </div>
+            <div>
+                Total Tip Out: $ <input class="input" id="totalTipOut" type="number">
+            </div>
+            <div>
+                Tips Remaining: $ <input class="input" id="tipsRemaining" type="number">
+            </div>
+            <div>
+                Bartender Total Hours: <input class="input" id="totalBartenderHours" type="number">
+            </div>
+            <div>
+                Bartender Tips Per Hour: <input class="input" id="bartenderHourlyTips" type="number">
+            </div>
+            <div>
+                <buttton id="bartenderBtn" class="btn btn-sm btn-info">Calculate</buttton>
+            </div>
+        </div>
+
+        
+
+
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
